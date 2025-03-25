@@ -121,3 +121,32 @@ def menu_banco_de_dados():
             print("\n❌ Opção inválida! Tente novamente.\n")
 
         input("Pressione ENTER para continuar...")
+
+def menu_iso():
+    opcoes_os = {
+        "1": ("Windows 11 (Media Creator Tool)", "https://software-static.download.prss.microsoft.com/dbazure/888969d5-f34g-4e03-ac9d-1f9786c66749/mediacreationtool.exe"),
+        "2": ("Ubuntu (24.04.2 LTS)", "https://releases.ubuntu.com/24.04.2/ubuntu-24.04.2-desktop-amd64.iso"),
+        "3": ("Ubuntu (24.10)", "https://releases.ubuntu.com/24.10/ubuntu-24.10-desktop-amd64.iso"),
+        "4": ("Debian 12 (Full install)", "https://cdimage.debian.org/debian-cd/current/amd64/iso-dvd/debian-12.10.0-amd64-DVD-1.iso"),
+        "5": ("Fedora 41", "https://download.fedoraproject.org/pub/fedora/linux/releases/41/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-41-1.4.iso"),
+        "5": ("OpenSuse (Tumbleweed)", "https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-DVD-x86_64-Current.iso"),
+        "6": ("Rufus", "https://github.com/pbatard/rufus/releases/download/v4.6/rufus-4.6.exe"),
+        "7": ("Voltar", None)
+    }
+
+    while True:
+        exibir_menu("Escolha o Banco de Dados", opcoes_os)
+        escolha = input("👉 Digite o número correspondente: ")
+
+        if escolha == "7":
+            break  # Volta ao menu principal
+
+        if escolha in opcoes_os:
+            nome, link = opcoes_os[escolha]
+            print(f"\n✅ Você escolheu {nome}. Iniciando download...")
+            print(f"🔗 Link de download: {link}\n")
+            downloader.download_arquivo(link, "downloads/iso")
+        else:
+            print("\n❌ Opção inválida! Tente novamente.\n")
+
+        input("Pressione ENTER para continuar...")

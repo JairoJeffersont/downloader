@@ -38,12 +38,16 @@ def download_arquivo(url, pasta_destino, tentativas_max=3, intervalo_tentativas=
                 baixado_mb = baixado / (1024 * 1024)
                 tempo_decorrido = time.time() - inicio
                 velocidade = baixado_mb / tempo_decorrido if tempo_decorrido > 0 else 0
+                
                 if tamanho_total:
                     percentual = (baixado / tamanho_total) * 100
-                    print(f"{baixado_mb:.2f} MB de {tamanho_mb:.2f} MB ({percentual:.2f}%) - {velocidade:.2f} MB/s", end='\r')
+                    # Calculando o tempo restante
+                    tempo_restante = (tamanho_total - baixado) / (velocidade * 1024 * 1024) if velocidade > 0 else 0
+                    minutos_restantes = int(tempo_restante // 60)
+                    segundos_restantes = int(tempo_restante % 60)
+                    print(f"{baixado_mb:.2f} MB de {tamanho_mb:.2f} MB ({percentual:.2f}%) - {velocidade:.2f} MB/s - Tempo restante: {minutos_restantes:02}:{segundos_restantes:02}", end='\r')
                 else:
                     print(f"{baixado_mb:.2f} MB baixados - {velocidade:.2f} MB/s", end='\r')
     
     print("\n\nDownload concluído!")
     print(f"O arquivo foi salvo na pasta {pasta_destino}/{nome_arquivo}\n")
-

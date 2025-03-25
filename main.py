@@ -23,7 +23,8 @@ def menu_principal():
         "2": ("SDK's", menus.menu_sdk),
         "3": ("Ambientes de desenvolvimento", menus.menu_ides),
         "4": ("Banco de dados", menus.menu_banco_de_dados),
-        "5": ("Sair", None)
+        "5": ("Sistemas operacionais", menus.menu_iso),
+        "6": ("Sair", None)
     }
     
     while True:
@@ -32,7 +33,7 @@ def menu_principal():
         escolha = input("👉 Digite o número correspondente: ")
 
         if escolha in opcoes_principais:
-            if escolha == "5":
+            if escolha == "6":
                 print("\n👋 Saindo... Até logo!\n")
                 break
             else:
