@@ -3,7 +3,7 @@ import os
 import time
 
 def download_arquivo(url, pasta_destino, tentativas_max=3, intervalo_tentativas=5):
-    print(f"\nIniciando download do arquivo {url}\n")
+    print(f"\nIniciando download....\n")
     
     if not os.path.exists(pasta_destino):
         os.makedirs(pasta_destino)

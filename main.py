@@ -1,4 +1,3 @@
-from modulos import downloader
 from menus import menus
 import os
 
@@ -37,7 +36,7 @@ def menu_principal():
                 print("\n👋 Saindo... Até logo!\n")
                 break
             else:
-                opcoes_principais[escolha][1]()  # Chama a função do menu escolhido
+                opcoes_principais[escolha][1]()
         else:
             print("\n❌ Opção inválida! Tente novamente.\n")
             input("Pressione ENTER para continuar...")
