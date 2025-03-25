@@ -17,7 +17,6 @@ def exibir_menu(titulo, opcoes):
     
     print("\n" + "=" * 50)
 
-
 def menu_principal():
     opcoes_principais = {
         "1": ("Navegadores", menus.menu_navegadores),
