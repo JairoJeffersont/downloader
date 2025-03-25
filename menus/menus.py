@@ -130,7 +130,7 @@ def menu_iso():
         "4": ("Debian 12 (Full install)", "https://cdimage.debian.org/debian-cd/current/amd64/iso-dvd/debian-12.10.0-amd64-DVD-1.iso"),
         "5": ("Fedora 41", "https://download.fedoraproject.org/pub/fedora/linux/releases/41/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-41-1.4.iso"),
         "5": ("OpenSuse (Tumbleweed)", "https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-DVD-x86_64-Current.iso"),
-        "6": ("Rufus", "https://github.com/pbatard/rufus/releases/download/v4.6/rufus-4.6.exe"),
+        "6": ("Rufus (Criar USB Inicializavel)", "https://github.com/pbatard/rufus/releases/download/v4.6/rufus-4.6.exe"),
         "7": ("Voltar", None)
     }
 
